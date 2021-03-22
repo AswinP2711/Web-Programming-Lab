@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Online Examination</title>
+    <style>
+        body {
+            background-color: #203647;
+        }
+        
+        .heading {
+            text-align: center;
+            color: white;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+        
+        .question {
+            background-color: #007CC7;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 15px 5px 15px 5px;
+            margin: 0px 750px 0px 50px;
+        }
+        
+        .option {
+            background-color: #12232E;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0px 750px 0px 50px;
+            padding: 15px 20px 15px 20px;
+        }
+        
+        #subbtn {
+            border-radius: 8px;
+            background-color: #4DA8DA;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 265px;
+            cursor: pointer;
+        }
+        
+        #resbtn {
+            border-radius: 8px;
+            background-color: white;
+            border: none;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        
+        #result {
+            background-color: #266150;
+            text-align: center;
+            margin: 15px 500px 15px 500px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">Online Examination</h1>
+    <p id="result"></p>
+    <form name="exam" onsubmit="return valuateExam()" onreset="onReset()">
+        <div class="contain">
+            <div class="question">
+                <p>1. Which tag is used for paragraph in html</p>
+            </div>
+            <div class="option">
+                <input type="radio" id="q1a" name="q1" value="<pre>" required>
+                <label>&ltpre&gt</label>
+                <input type="radio" id="q1b" name="q1" value="<p>">
+                <label>&ltp&gt</label>
+                <input type="radio" id="q1c" name="q1" value="<div>">
+                <label>&ltv&gt</label>
+                <input type="radio" id="q1d" name="q1" value="None of these">
+                <label>None of these</label>
+            </div>
+            <br>
+            <div class="question">
+                <p>2. How many type of heading does html contain</p>
+            </div>
+            <div class="option">
+                <input type="radio" id="q2a" name="q2" value="3" required>
+                <label>3</label>
+                <input type="radio" id="q2b" name="q2" value="1">
+                <label>1</label>
+                <input type="radio" id="q2c" name="q2" value="6">
+                <label>6</label>
+                <input type="radio" id="q2d" name="q2" value="5">
+                <label>5</label>
+            </div>
+        </div>
+        <br>
+        <div class="question">
+            <p>3. Which of the following element is responsible for making the text bold in HTML?</p>
+        </div>
+        <div class="option">
+            <input type="radio" id="q3a" name="q3" value="<pre>" required>
+            <label>&ltpre&gt</label>
+            <input type="radio" id="q3b" name="q3" value="<a>">
+            <label>&lta&gt</label>
+            <input type="radio" id="q3c" name="q3" value="<b>">
+            <label>&ltb&gt</label>
+            <input type="radio" id="q3d" name="q3" value="<br>">
+            <label>&ltbr&gt</label>
+        </div>
+        </div>
+        <br>
+        <input id="subbtn" type="submit" value="Submit">
+        <input id="resbtn" type="reset" value="reset">
+    </form>
+    <script>
+        function valuateExam() {
+            marks = 0;
+            if (document.exam.q1.value == "<p>") {
+                marks += 1;
+            }
+            if (document.exam.q2.value == "6") {
+                marks += 1;
+            }
+            if (document.exam.q3.value == "<b>") {
+                marks += 1;
+            }
+            document.getElementById('result').innerHTML = 'Your Marks: ' + marks + '/3';
+            console.log(marks);
+            return false;
+        }
+
+        function onReset() {
+            document.getElementById('result').innerHTML = ''
+        }
+    </script>
+
+</body>
+
+</html>

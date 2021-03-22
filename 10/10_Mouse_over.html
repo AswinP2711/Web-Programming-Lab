@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>event handling</title>
+    <script>
+        function myFunction() {
+            document.getElementById("image").src = "location.PNG";
+            document.getElementById("text").innerHTML = "Location";
+        }
+
+        function myFun() {
+            document.getElementById("image").src = "college.jpg";
+            document.getElementById("text").innerHTML = "College Of Engineering Vadakara";
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="text">College Of Engineering Vadakara</h1>
+    <img id="image" onmouseover="myFunction()" onmouseout="myFun()" src="college.jpg" height="500">
+</body>
+
+</html>

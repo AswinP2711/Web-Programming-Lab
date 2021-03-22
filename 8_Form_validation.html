@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function validateForm() {
+            var name = document.forms["myForm"]["fname"].value;
+            var dobs = document.forms["myForm"]["dob"].value;
+            var gen = document.forms["myForm"]["gender"].value;
+            var mobile = document.forms["myForm"]["phone"].value;
+            var address = document.forms["myForm"]["address"].value;
+            if (name == "") {
+                alert("Name must be filled out");
+            } else if (dobs == "") {
+                alert("Date of birth must be filled out");
+            } else if (gen == "") {
+                alert("Gender must be filled out");
+            } else if (mobile == "") {
+                alert("Mobile number must be filled out");
+            } else if (address == "") {
+                alert("Adress must be filled out");
+            } else {
+                alert("Form Validated Successfully!!!");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>HTML Registration Form</h1>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+        <fieldset>
+            <legend>Registration</legend>
+
+            <label for="name">Name* :</label> <input type="Text" name="fname"><br>
+            <label for="dob">Date of birth* :</label> <input type="date" name="dob"><br>
+            <label for="male">Gender* : Male</label> <input type="radio" name="gender">
+            <label for="female">Female</label> <input type="radio" name="gender"><br>
+            <label for="phone">Phone* :</label> <input type="number" name="phone"><br>
+            <label for="address">Address* :</label> <textarea rows="3" name="address"></textarea><br>
+            <label for="course :">Course :</label><select name="course">
+                <option>-Select-</options>
+                <option value="mca">MCA</options>
+                <option value="bca">BCA</options>
+                <option value="b.tech">B.tech</options>
+            </select><br>
+            <label for="arts">Hobbies : Arts </label><input type="checkbox" name="hobbie">
+            <label for="sports">Sports </label> <input type="checkbox" name="hobbie">
+            <label for="others">Others</label> <input type="checkbox" name="hobbie"><br><br>
+            <input type="submit" value="Submt">
+            <input type="reset" value="Reset">
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
