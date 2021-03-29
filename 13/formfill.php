@@ -10,6 +10,7 @@
         Address : <textarea name="address" ></textarea><br>
         Contact no. : <input type="number" name="contact"><br>
         Email id : <input type="email" name="emailaddress"><br>
+        Subject : <input type="text" name="subject"><br>
         <input type="submit" name="insert" value="save">
         <input type="reset" value="cancel">
     </form>

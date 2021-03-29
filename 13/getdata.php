@@ -10,6 +10,7 @@
     echo "Address : ".$_POST['address']."<br>";
     echo "Contact no. : ".$_POST['contact']."<br>";
     echo "Email id : ".$_POST['emailaddress']."<br>";
+    echo "Subject : ".$_POST['subject']."<br>";
     ?>
 </body>
 </html>
